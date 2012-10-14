@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Declarations>
+		<maps:Map xmlns:maps="com.google.maps.*" id="map"   sensor="true_or_false"/>
+		
+
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+		
+		import com.google.maps.LatLng;
+		import com.google.maps.Map;
+		import com.google.maps.MapEvent;
+		import com.google.maps.MapType;
+		
+		private function onMapReady(event:Event):void {
+		this.map.setCenter(new LatLng(40.736072,-73.992062), 14, MapType.NORMAL_MAP_TYPE);
+		}
+		]]>
+	</fx:Script>
+</s:Application>
